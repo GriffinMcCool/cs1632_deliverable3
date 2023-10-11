@@ -1,0 +1,17 @@
+{
+  "id": "bfae508f-d64c-4c79-b8ba-66e28f327a29",
+  "version": "2.0",
+  "name": "PittEdu",
+  "url": "",
+  "tests": [],
+  "suites": [{
+    "id": "bc374d51-3af7-418e-8972-3a3a276f1fb1",
+    "name": "PittEdu",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}
