@@ -1,17 +1,393 @@
 {
   "id": "bfae508f-d64c-4c79-b8ba-66e28f327a29",
   "version": "2.0",
-  "name": "PittEdu",
-  "url": "",
-  "tests": [],
+  "name": "D3",
+  "url": "https://cs1632.appspot.com/",
+  "tests": [{
+    "id": "ca2396ee-a5fe-494a-813f-f33df3a14752",
+    "name": "TEST-1-LINKS",
+    "commands": [{
+      "id": "af357a08-da35-4bfb-883e-6f5a7bc8309c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3403046-5b21-4696-996e-397294a4544c",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bca62d03-fc00-4625-b591-efb3fe81f392",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(@href, '/reset')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b8b2c0a7-b1a2-4532-b465-f28423415d11",
+    "name": "TEST-2-RESET",
+    "commands": [{
+      "id": "fda9832a-fdf3-42bf-8420-7e4cef4b9a6a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d63f0cca-62c5-4574-9efd-d1b92187d912",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d41d866-344a-4a93-822e-422b9208b075",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=true\";document.cookie = \"2=true\";document.cookie = \"3=true\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec29125c-700c-4674-a773-b0ee322aee9a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[8]/a",
+      "targets": [
+        ["linkText=Reset", "linkText"],
+        ["css=li:nth-child(8) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Reset')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/reset')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Reset')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "152718fa-fc4f-48b3-b04e-7c8f519d3dd7",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li",
+      "targets": [
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li", "xpath:idRelative"],
+        ["xpath=//div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 1. Jennyanydots')]", "xpath:innerText"]
+      ],
+      "value": "ID 1. Jennyanydots"
+    }, {
+      "id": "6fa4e3c2-c7c1-46dc-8e40-263c516a1e21",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[2]",
+      "targets": [
+        ["css=.list-group-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 2. Old Deuteronomy')]", "xpath:innerText"]
+      ],
+      "value": "ID 2. Old Deuteronomy"
+    }, {
+      "id": "6531f521-57fe-4998-9aed-af17221b55e1",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[3]",
+      "targets": [
+        ["css=.list-group-item:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 3. Mistoffelees')]", "xpath:innerText"]
+      ],
+      "value": "ID 3. Mistoffelees"
+    }]
+  }, {
+    "id": "89c17327-1880-445c-a375-1adf7d9019d7",
+    "name": "TEST-3-CATALOG",
+    "commands": [{
+      "id": "68a82903-3a3b-43b7-9865-1b1371821b4a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d50cceef-ca7b-45a9-963c-7ba0d7fe194f",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28d6c4d3-977c-4f15-9c03-38fbcc21a21c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Catalog",
+      "targets": [
+        ["linkText=Catalog", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Catalog')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Catalog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1409753-cc5b-4a07-91f4-6564be6a7187",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "xpath=//li[2]/img@src",
+      "targets": [],
+      "value": "image"
+    }, {
+      "id": "ce619ce6-312f-4bf8-94b9-b243cb3bc8fe",
+      "comment": "",
+      "command": "assert",
+      "target": "image",
+      "targets": [],
+      "value": "/images/cat2.jpg"
+    }]
+  }, {
+    "id": "68da9fb6-9d21-4395-b0b3-722c03a85e7e",
+    "name": "TEST-4-LISTING",
+    "commands": [{
+      "id": "d6866fea-f5ed-4ff5-a2ce-cf0ee1726eae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a962ddc4-6206-406e-a964-14b4b0d26118",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf70c372-f298-48c0-aa2b-e1497e06f891",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Catalog",
+      "targets": [
+        ["linkText=Catalog", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Catalog')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Catalog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ae80654-6af2-4514-8391-a7a6fba2d33d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='listing']/ul/li[3]",
+      "targets": [
+        ["css=.list-group-item:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 3. Mistoffelees')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddeb8cdc-137a-443d-84d2-b0e7925c5976",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@id='listing']/ul/li[4]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c652957c-1313-46b5-b261-c73bcb59c174",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[3]",
+      "targets": [],
+      "value": "ID 3. Mistoffelees"
+    }]
+  }, {
+    "id": "4755c01e-dbb4-4ae8-b5e1-685163a47ac8",
+    "name": "TEST-5-RENT-A-CAT",
+    "commands": [{
+      "id": "ae255b60-ad90-42f9-bf14-37dc18bfdc32",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fda6afaf-fe81-4cea-98db-4fc8b36268fe",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eb7fa42-bdeb-44c1-aecd-7ede7c638e76",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rent-A-Cat",
+      "targets": [
+        ["linkText=Rent-A-Cat", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Rent-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/rent-a-cat')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rent-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c9ad28f-9ed7-49bc-8d61-2865cea53b87",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(.,'Rent')]",
+      "targets": [
+        ["css=.form-group:nth-child(3) .btn", "css:finder"],
+        ["xpath=//button[@onclick='rentSubmit()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ea86be-91e1-4b60-8b54-686d9d9a8805",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(.,'Return')]",
+      "targets": [
+        ["css=.form-group:nth-child(4) .btn", "css:finder"],
+        ["xpath=//button[@onclick='returnSubmit()']", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Return')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2e76a50e-ebff-4664-81b9-1a7780c2e814",
+    "name": "TEST-6-RENT",
+    "commands": [{
+      "id": "d6fe7cf6-76dc-43d9-bde8-d19208580ba5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3752ee45-fad4-49c2-b5f2-34045c6914bf",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c5ef08c-fbca-4d2f-9661-f8f4194c0e68",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rent-A-Cat",
+      "targets": [
+        ["linkText=Rent-A-Cat", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Rent-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/rent-a-cat')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rent-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9337c93f-cb7d-41ff-956c-2e0a1de1a5c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=rentID",
+      "targets": [
+        ["id=rentID", "id"],
+        ["css=#rentID", "css:finder"],
+        ["xpath=//input[@id='rentID']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a297a63d-0897-414e-85a6-f504b7a72ea3",
+      "comment": "",
+      "command": "type",
+      "target": "id=rentID",
+      "targets": [
+        ["id=rentID", "id"],
+        ["css=#rentID", "css:finder"],
+        ["xpath=//input[@id='rentID']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "7c51bc43-86cb-4adf-9e6d-bea7a28e047c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(3) .btn",
+      "targets": [
+        ["css=.form-group:nth-child(3) .btn", "css:finder"],
+        ["xpath=//button[@onclick='rentSubmit()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23ee4d35-0c0e-4c6d-8faa-d2fd2d14fb71",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li",
+      "targets": [
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li", "xpath:idRelative"],
+        ["xpath=//div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": "Rented out"
+    }, {
+      "id": "7bb444d5-c593-4f05-8462-dac04aa98743",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[2]",
+      "targets": [
+        ["css=.list-group-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 2. Old Deuteronomy')]", "xpath:innerText"]
+      ],
+      "value": "ID 2. Old Deuteronomy"
+    }, {
+      "id": "8771ec3b-a2ea-48f4-8a70-fa365898ae70",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[3]",
+      "targets": [
+        ["css=.list-group-item:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 3. Mistoffelees')]", "xpath:innerText"]
+      ],
+      "value": "ID 3. Mistoffelees"
+    }, {
+      "id": "0bd8a96c-4b85-47ab-a35a-888bec2b7813",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=rentResult",
+      "targets": [
+        ["id=rentResult", "id"],
+        ["css=#rentResult", "css:finder"],
+        ["xpath=//div[@id='rentResult']", "xpath:attributes"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": "Success!"
+    }]
+  }],
   "suites": [{
     "id": "bc374d51-3af7-418e-8972-3a3a276f1fb1",
-    "name": "PittEdu",
+    "name": "D3",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["ca2396ee-a5fe-494a-813f-f33df3a14752", "b8b2c0a7-b1a2-4532-b465-f28423415d11", "89c17327-1880-445c-a375-1adf7d9019d7", "68da9fb6-9d21-4395-b0b3-722c03a85e7e", "4755c01e-dbb4-4ae8-b5e1-685163a47ac8", "2e76a50e-ebff-4664-81b9-1a7780c2e814"]
   }],
-  "urls": [],
+  "urls": ["https://cs1632.appspot.com/"],
   "plugins": []
 }
