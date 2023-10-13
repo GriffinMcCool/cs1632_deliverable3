@@ -379,6 +379,292 @@
       ],
       "value": "Success!"
     }]
+  }, {
+    "id": "c4959cbb-b2aa-42e5-bd99-95851239733d",
+    "name": "TEST-7-RETURN",
+    "commands": [{
+      "id": "d937bdb5-36f3-47c7-9f3b-94ead46538c6",
+      "comment": "",
+      "command": "open",
+      "target": "https://cs1632.appspot.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ee05839-2a6b-44b6-9cf4-bc1549de9889",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=true\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e82c8be3-1f89-47f5-93d0-fea07a9daf67",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rent-A-Cat",
+      "targets": [
+        ["linkText=Rent-A-Cat", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Rent-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/rent-a-cat')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rent-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "518b2b42-5a2a-4456-b462-e5f4066c1a33",
+      "comment": "",
+      "command": "click",
+      "target": "id=returnID",
+      "targets": [
+        ["id=returnID", "id"],
+        ["css=#returnID", "css:finder"],
+        ["xpath=//input[@id='returnID']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab6fd90b-0b9d-4f10-8c36-def91bcc8664",
+      "comment": "",
+      "command": "type",
+      "target": "id=returnID",
+      "targets": [
+        ["id=returnID", "id"],
+        ["css=#returnID", "css:finder"],
+        ["xpath=//input[@id='returnID']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "2b01919b-97b6-4d7f-ab44-314740042ae4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4) .btn",
+      "targets": [
+        ["css=.form-group:nth-child(4) .btn", "css:finder"],
+        ["xpath=//button[@onclick='returnSubmit()']", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Return')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64b973c3-f1e4-433e-9afc-a44d5b007308",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li",
+      "targets": [
+        ["css=.list-group-item:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li", "xpath:idRelative"],
+        ["xpath=//div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 1. Jennyanydots')]", "xpath:innerText"]
+      ],
+      "value": "ID 1. Jennyanydots"
+    }, {
+      "id": "c8bc6992-d221-49d7-a43f-e663b9800fe3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[2]",
+      "targets": [
+        ["css=.list-group-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 2. Old Deuteronomy')]", "xpath:innerText"]
+      ],
+      "value": "ID 2. Old Deuteronomy"
+    }, {
+      "id": "70e6e8da-e3cd-4f78-9f04-726bda43c537",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='listing']/ul/li[3]",
+      "targets": [
+        ["css=.list-group-item:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listing']/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'ID 3. Mistoffelees')]", "xpath:innerText"]
+      ],
+      "value": "ID 3. Mistoffelees"
+    }, {
+      "id": "4045603f-06e1-4483-9e6b-13d943d04568",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='returnResult']",
+      "targets": [
+        ["id=returnResult", "id"],
+        ["css=#returnResult", "css:finder"],
+        ["xpath=//div[@id='returnResult']", "xpath:attributes"],
+        ["xpath=//div[3]/div[4]", "xpath:position"]
+      ],
+      "value": "Success!"
+    }]
+  }, {
+    "id": "0e164066-76ae-41ca-a58e-44f25aa965de",
+    "name": "TEST-8-FEED-A-CAT",
+    "commands": [{
+      "id": "b4e85acd-cddd-4d6b-b27a-6052c2040ca7",
+      "comment": "",
+      "command": "open",
+      "target": "https://cs1632.appspot.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fba8ebac-7250-4cfa-8856-f92a57924e2a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Feed-A-Cat",
+      "targets": [
+        ["linkText=Feed-A-Cat", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Feed-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/feed-a-cat')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Feed-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aede5ea-2d42-41b3-b471-c6b46fc10865",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(.,'Feed')]",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@onclick='feedSubmit()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Feed')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "12f7776e-f3e8-456a-9a49-ade519df8bbd",
+    "name": "TEST-9-FEED",
+    "commands": [{
+      "id": "c01246dc-40a0-478d-947f-53a7205b7e22",
+      "comment": "",
+      "command": "open",
+      "target": "https://cs1632.appspot.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "305d3750-9706-4f0d-b8c1-a8f0dc21603e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Feed-A-Cat",
+      "targets": [
+        ["linkText=Feed-A-Cat", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Feed-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/feed-a-cat')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Feed-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e94274a-e019-4068-af7f-c6d38106e8c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=catnips",
+      "targets": [
+        ["id=catnips", "id"],
+        ["css=#catnips", "css:finder"],
+        ["xpath=//input[@id='catnips']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad75f135-e03b-4e70-a255-e241b283f59c",
+      "comment": "",
+      "command": "type",
+      "target": "id=catnips",
+      "targets": [
+        ["id=catnips", "id"],
+        ["css=#catnips", "css:finder"],
+        ["xpath=//input[@id='catnips']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "9124f138-a4e9-4179-80b8-e3e6f7a95481",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@onclick='feedSubmit()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Feed')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3027661c-701c-4c4e-a7e7-9ec7424a6b40",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='feedResult']",
+      "targets": [
+        ["id=feedResult", "id"],
+        ["css=#feedResult", "css:finder"],
+        ["xpath=//div[@id='feedResult']", "xpath:attributes"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": "Nom, nom, nom."
+    }]
+  }, {
+    "id": "6ce1c5b3-9688-4f63-bfcb-7a28ee144b7d",
+    "name": "TEST-10-GREET-A-CAT",
+    "commands": [{
+      "id": "ca97fb7c-11a6-4a3f-89b6-d1753d135a00",
+      "comment": "",
+      "command": "open",
+      "target": "https://cs1632.appspot.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7962bfa-60ca-4eb8-bf19-9ff7da2ee6d7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Greet-A-Cat",
+      "targets": [
+        ["linkText=Greet-A-Cat", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Greet-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/greet-a-cat')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Greet-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3abd3156-4c8b-4b5d-9bae-6fccf4b7669f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='greeting']/h4",
+      "targets": [
+        ["css=#greeting > h4", "css:finder"],
+        ["xpath=//div[@id='greeting']/h4", "xpath:idRelative"],
+        ["xpath=//div[2]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Meow!Meow!Meow!')]", "xpath:innerText"]
+      ],
+      "value": "Meow!Meow!Meow!"
+    }]
+  }, {
+    "id": "cbd6898a-d13a-4be6-b6b2-c98b31d027a9",
+    "name": "TEST-11-GREET-A-CAT-WITH-NAME",
+    "commands": [{
+      "id": "bfbf5f76-977f-4567-9db3-0ecade789c10",
+      "comment": "",
+      "command": "open",
+      "target": "https://cs1632.appspot.com/greet-a-cat/Jennyanydots",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae4055ea-dacc-49f6-b3c8-5063cbf71be4",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='greeting']/h4",
+      "targets": [
+        ["css=#greeting > h4", "css:finder"],
+        ["xpath=//div[@id='greeting']/h4", "xpath:idRelative"],
+        ["xpath=//div[2]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Meow! from Jennyanydots.')]", "xpath:innerText"]
+      ],
+      "value": "Meow! from Jennyanydots."
+    }]
   }],
   "suites": [{
     "id": "bc374d51-3af7-418e-8972-3a3a276f1fb1",
@@ -386,7 +672,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["ca2396ee-a5fe-494a-813f-f33df3a14752", "b8b2c0a7-b1a2-4532-b465-f28423415d11", "89c17327-1880-445c-a375-1adf7d9019d7", "68da9fb6-9d21-4395-b0b3-722c03a85e7e", "4755c01e-dbb4-4ae8-b5e1-685163a47ac8", "2e76a50e-ebff-4664-81b9-1a7780c2e814"]
+    "tests": ["ca2396ee-a5fe-494a-813f-f33df3a14752", "b8b2c0a7-b1a2-4532-b465-f28423415d11", "89c17327-1880-445c-a375-1adf7d9019d7", "68da9fb6-9d21-4395-b0b3-722c03a85e7e", "4755c01e-dbb4-4ae8-b5e1-685163a47ac8", "2e76a50e-ebff-4664-81b9-1a7780c2e814", "c4959cbb-b2aa-42e5-bd99-95851239733d", "0e164066-76ae-41ca-a58e-44f25aa965de", "12f7776e-f3e8-456a-9a49-ade519df8bbd", "6ce1c5b3-9688-4f63-bfcb-7a28ee144b7d", "cbd6898a-d13a-4be6-b6b2-c98b31d027a9"]
   }],
   "urls": ["https://cs1632.appspot.com/"],
   "plugins": []
