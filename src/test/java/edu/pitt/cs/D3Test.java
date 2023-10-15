@@ -18,7 +18,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class D3Test {
   private WebDriver driver;
@@ -26,7 +26,7 @@ public class D3Test {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    driver = new FirefoxDriver();
+    driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
