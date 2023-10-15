@@ -19,7 +19,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class D3Test {
   private WebDriver driver;
