@@ -506,6 +506,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "b3d3d852-9960-405c-a58e-3aebde1d4b8c",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "fba8ebac-7250-4cfa-8856-f92a57924e2a",
       "comment": "",
       "command": "click",
@@ -540,6 +547,13 @@
       "comment": "",
       "command": "open",
       "target": "https://cs1632.appspot.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05a8c079-1194-4cf4-bbd6-14c3987f5d07",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
       "targets": [],
       "value": ""
     }, {
@@ -616,6 +630,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "04091da0-ec47-4bd9-a087-2700e6726c88",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b7962bfa-60ca-4eb8-bf19-9ff7da2ee6d7",
       "comment": "",
       "command": "click",
@@ -650,6 +671,13 @@
       "comment": "",
       "command": "open",
       "target": "https://cs1632.appspot.com/greet-a-cat/Jennyanydots",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64c69d66-b40f-4fcb-9fa5-3ae9795fcc18",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
       "targets": [],
       "value": ""
     }, {
@@ -825,6 +853,50 @@
       ],
       "value": "Cat fight!"
     }]
+  }, {
+    "id": "3a9f208d-b936-4701-bcf6-63a1d7ab3ab3",
+    "name": "DEFECT-3-FUN-GREET-A-CAT",
+    "commands": [{
+      "id": "396233aa-0f37-44db-8aae-84ab17aaf107",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d173b182-47b5-4cc7-b9cc-5b3cc11d573d",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"1=true\";document.cookie = \"2=false\";document.cookie = \"3=false\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3663345-9797-4cca-9980-5bca9a58d9b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Greet-A-Cat",
+      "targets": [
+        ["linkText=Greet-A-Cat", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Greet-A-Cat')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/greet-a-cat')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Greet-A-Cat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a18ec051-132f-4d5e-a9f7-f7ad20664e11",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#greeting > h4",
+      "targets": [
+        ["css=#greeting > h4", "css:finder"],
+        ["xpath=//div[@id='greeting']/h4", "xpath:idRelative"],
+        ["xpath=//div[2]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Meow!Meow!Meow!')]", "xpath:innerText"]
+      ],
+      "value": "Meow!Meow!"
+    }]
   }],
   "suites": [{
     "id": "bc374d51-3af7-418e-8972-3a3a276f1fb1",
@@ -832,7 +904,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["ca2396ee-a5fe-494a-813f-f33df3a14752", "b8b2c0a7-b1a2-4532-b465-f28423415d11", "89c17327-1880-445c-a375-1adf7d9019d7", "68da9fb6-9d21-4395-b0b3-722c03a85e7e", "4755c01e-dbb4-4ae8-b5e1-685163a47ac8", "2e76a50e-ebff-4664-81b9-1a7780c2e814", "c4959cbb-b2aa-42e5-bd99-95851239733d", "0e164066-76ae-41ca-a58e-44f25aa965de", "12f7776e-f3e8-456a-9a49-ade519df8bbd", "6ce1c5b3-9688-4f63-bfcb-7a28ee144b7d", "cbd6898a-d13a-4be6-b6b2-c98b31d027a9", "9618502d-0ec2-4990-9451-9a7c2d149861", "95b81693-b4d2-46d9-89ef-aa07e8fba7f6"]
+    "tests": ["ca2396ee-a5fe-494a-813f-f33df3a14752", "b8b2c0a7-b1a2-4532-b465-f28423415d11", "89c17327-1880-445c-a375-1adf7d9019d7", "68da9fb6-9d21-4395-b0b3-722c03a85e7e", "4755c01e-dbb4-4ae8-b5e1-685163a47ac8", "2e76a50e-ebff-4664-81b9-1a7780c2e814", "c4959cbb-b2aa-42e5-bd99-95851239733d", "0e164066-76ae-41ca-a58e-44f25aa965de", "12f7776e-f3e8-456a-9a49-ade519df8bbd", "6ce1c5b3-9688-4f63-bfcb-7a28ee144b7d", "cbd6898a-d13a-4be6-b6b2-c98b31d027a9", "9618502d-0ec2-4990-9451-9a7c2d149861", "95b81693-b4d2-46d9-89ef-aa07e8fba7f6", "3a9f208d-b936-4701-bcf6-63a1d7ab3ab3"]
   }],
   "urls": ["https://cs1632.appspot.com/"],
   "plugins": []
