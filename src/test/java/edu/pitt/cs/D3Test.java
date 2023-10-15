@@ -18,7 +18,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class D3Test {
@@ -27,7 +27,7 @@ public class D3Test {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    driver = new ChromeDriver();
+    driver = new FirefoxDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
@@ -64,7 +64,7 @@ public class D3Test {
       String attribute = element.getAttribute("src");
       vars.put("image", attribute);
     }
-    assertEquals(vars.get("image").toString(), "/images/cat2.jpg");
+    assertEquals(vars.get("image").toString(), "https://cs1632.appspot.com/images/cat2.jpg");
   }
   @Test
   public void tEST4LISTING() {
